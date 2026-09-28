@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Junior Finance App Design - Utkarsh Patil</title>
+  <meta name="description" content="Junior Finance App Development and UX Design case study by Utkarsh Patil." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" type="text/css" href="/main_style.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/custom.css" />
+</head>
+
+<body class="header-page has-header-image header-overlay-on full-width-body-off">
+
+  <div class="wrapper">
+    <header class="birdseye-header">
+      <div class="nav-wrap">
+        <div class="container" style="display: flex; justify-content: flex-end; align-items: center;">
+          <nav class="nav desktop-nav">
+            <ul class="wsite-menu-default">
+              <li class="wsite-menu-item-wrap"><a href="index.html" class="wsite-menu-item">HOME</a></li>
+              <li class="wsite-menu-item-wrap wsite-menu-link-active"><a href="portfolio.html" class="wsite-menu-item">MY WORK</a></li>
+              <li class="wsite-menu-item-wrap"><a href="contact.html" class="wsite-menu-item btn-nav-accent">CONTACT</a></li>
+              <li class="wsite-menu-item-wrap"><a href="/assets/Utkarsh_Patil_Resume.pdf" download="Utkarsh_Patil_Resume.pdf" target="_blank" class="wsite-menu-item btn-nav-accent" style="background: rgba(255,255,255,0.2) !important; border: 1px solid rgba(255,255,255,0.4) !important;">RESUME</a></li>
+            </ul>
+          </nav>
+          <a class="hamburger" aria-label="Toggle Mobile Menu" href="#"><span></span></a>
+        </div>
+      </div>
+    </header>
+
+    <section class="banner-wrap">
+      <div class="container">
+        <div class="banner" style="padding: 90px 0 70px; text-align: center;">
+          <h1 style="font-size: 48px; font-weight: 700; color: #eab308; margin-bottom: 16px; text-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            Junior Finance - App Development
+          </h1>
+          <p style="font-size: 19px; color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto; font-weight: 300;">
+            A savior / saver for parents and their college-bound children.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <main class="main-wrap">
+      <section style="padding: 80px 0; background: #ffffff;">
+        <div class="container" style="max-width: 950px; margin: 0 auto;">
+          <div style="font-size: 17px; line-height: 1.8; color: #334155; margin-bottom: 30px; text-align: center;">
+            <p>
+              Junior Finance is a digital product concept designed to empower young adults and students to build healthy financial habits while giving parents visibility and peace of mind.
+            </p>
+          </div>
+
+          <!-- Interactive 14-Slide Presentation Deck -->
+          <div class="slideshow-container" id="financeSlideshow">
+            <div class="slide-item active"><img src="/uploads/1/4/8/2/148248988/screenshot-149.png" alt="Junior Finance Slide 1" /></div>
+            <div class="slide-item"><img src="/uploads/1/4/8/2/148248988/screenshot-162.png" alt="Junior Finance Slide 2" /></div>
+            <div class="slide-item"><img src="/uploads/1/4/8/2/148248988/screenshot-150.png" alt="Junior Finance Slide 3" /></div>
+            <div class="slide-item"><img src="/uploads/1/4/8/2/148248988/screenshot-151.png" alt="Junior Finance Slide 4" /></div>
+            <div class="slide-item"><img src="/uploads/1/4/8/2/148248988/screenshot-152.png" alt="Junior Finance Slide 5" /></div>
+            <div class="slide-item"><img src="/uploads/1/4/8/2/148248988/screenshot-153.png" alt="Junior Finance Slide 6" /></div>
+            <div class="slide-item"><img src="/uploads/1/4/8/2/148248988/screenshot-154.png" alt="Junior Finance Slide 7" /></div>
+            <div class="slide-item"><img src="/uploads/1/4/8/2/148248988/screenshot-155.png" alt="Junior Finance Slide 8" /></div>
+            <div class="slide-item"><img src="/uploads/1/4/8/2/148248988/screenshot-156.png" alt="Junior Finance Slide 9" /></div>
+            <div class="slide-item"><img src="/uploads/1/4/8/2/148248988/screenshot-157.png" alt="Junior Finance Slide 10" /></div>
+            <div class="slide-item"><img src="/uploads/1/4/8/2/148248988/screenshot-158.png" alt="Junior Finance Slide 11" /></div>
+            <div class="slide-item"><img src="/uploads/1/4/8/2/148248988/screenshot-159.png" alt="Junior Finance Slide 12" /></div>
+            <div class="slide-item"><img src="/uploads/1/4/8/2/148248988/screenshot-160.png" alt="Junior Finance Slide 13" /></div>
+            <div class="slide-item"><img src="/uploads/1/4/8/2/148248988/screenshot-161.png" alt="Junior Finance Slide 14" /></div>
+
+            <div class="slideshow-controls">
+              <button class="slideshow-btn" onclick="prevSlide()">❮ Previous</button>
+              <span class="slide-counter" id="slideCounter">Slide 1 of 14</span>
+              <button class="slideshow-btn" onclick="nextSlide()">Next ❯</button>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 40px;">
+            <a href="portfolio.html" style="color: #0284c7; font-weight: 600; text-decoration: none; font-size: 15px;">← Back to My Work</a>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-wrap" style="background: #090d16; color: #94a3b8; padding: 40px 0; border-top: 1px solid #1e293b;">
+      <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <p style="margin: 0; font-size: 14px; color: #64748b;">© 2026 Utkarsh Patil. All rights reserved.</p>
+        <div style="display: flex; gap: 24px; font-size: 13px;">
+          <a href="index.html" style="color: #94a3b8; text-decoration: none;">HOME</a>
+          <a href="portfolio.html" style="color: #94a3b8; text-decoration: none;">MY WORK</a>
+          <a href="contact.html" style="color: #94a3b8; text-decoration: none;">CONTACT</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="navMobile" class="nav mobile-nav">
+    <a class="hamburger" aria-label="Close Menu" href="#"><span></span></a>
+    <ul class="wsite-menu-default">
+      <li class="wsite-menu-item-wrap"><a href="index.html" class="wsite-menu-item">HOME</a></li>
+      <li class="wsite-menu-item-wrap wsite-menu-link-active"><a href="portfolio.html" class="wsite-menu-item">MY WORK</a></li>
+      <li class="wsite-menu-item-wrap"><a href="contact.html" class="wsite-menu-item">CONTACT</a></li>
+      <li class="wsite-menu-item-wrap"><a href="/assets/Utkarsh_Patil_Resume.pdf" download="Utkarsh_Patil_Resume.pdf" target="_blank" class="wsite-menu-item">RESUME</a></li>
+    </ul>
+  </div>
+
+  <script src="/assets/plugins.js"></script>
+  <script src="/assets/custom.js"></script>
+  <script src="/assets/js/theme-app.js"></script>
+</body>
+</html>

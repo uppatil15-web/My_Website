@@ -1,0 +1,20 @@
+{
+  "name": "weebly-custom-theme-studio",
+  "version": "1.0.0",
+  "description": "Local development and live visual preview studio for Weebly custom themes",
+  "main": "dev-server.js",
+  "scripts": {
+    "dev": "node dev-server.js",
+    "build": "node build-theme.js"
+  },
+  "keywords": ["weebly", "theme", "preview", "less"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "chokidar": "^3.6.0",
+    "express": "^4.19.2",
+    "less": "^4.2.0",
+    "ws": "^8.17.0"
+  }
+}
