@@ -85,7 +85,7 @@ app.use('/styles', express.static(path.join(ROOT_DIR, 'styles')));
 app.use(express.static(ROOT_DIR));
 
 // Dynamic compiled CSS endpoint
-app.get('/main_style.css', async (req, res) => {
+app.get('/assets/css/main_style.css', async (req, res) => {
   try {
     const variation = req.query.variation || 'light';
     const css = await compileLess(variation);

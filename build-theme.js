@@ -5,7 +5,7 @@ const archiver = require('archiver');
 
 const STYLES_DIR = path.join(__dirname, 'styles');
 const MAIN_LESS = path.join(STYLES_DIR, 'main.less');
-const OUTPUT_CSS = path.join(__dirname, 'main_style.css');
+const OUTPUT_CSS = path.join(__dirname, 'assets', 'css', 'main_style.css');
 const ROOT_ZIP = path.join(__dirname, 'birdseye-website-export.zip');
 
 async function compileLess(variation = 'light') {
@@ -29,8 +29,7 @@ async function compileLess(variation = 'light') {
     });
 
     fs.writeFileSync(OUTPUT_CSS, output.css, 'utf8');
-    fs.writeFileSync(path.join(STYLES_DIR, 'main_style.css'), output.css, 'utf8');
-    console.log(`[Build] LESS compiled successfully to main_style.css (${variation} mode)`);
+    console.log(`[Build] LESS compiled successfully to assets/css/main_style.css (${variation} mode)`);
     return output.css;
   } catch (err) {
     console.error('[Build Error] Failed to compile LESS:', err);
