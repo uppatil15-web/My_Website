@@ -124,7 +124,7 @@ body {
 
 /* Home Page Hero */
 .home-banner, .banner-wrap.home-banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.35)), url('/assets/images/Utkarsh_Patil_portfolio_headshot.jpeg') !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.35)), url('../images/Utkarsh_Patil_portfolio_headshot.jpeg') !important;
   background-size: cover !important;
   background-position: center top !important;
   min-height: 100vh;
