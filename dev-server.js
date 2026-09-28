@@ -424,14 +424,15 @@ app.get('/', (req, res) => {
         <label>Page:</label>
         <select id="selPage" onchange="updatePreview()">
           <option value="index.html">Home Page (index.html)</option>
-          <option value="portfolio.html">My Work Page (portfolio.html)</option>
-          <option value="procurement-at-tesla.html">Procurement at Tesla</option>
-          <option value="carxchange-website-optimization.html">CarXchange Optimization</option>
-          <option value="junior-finance-app-design.html">Junior Finance App</option>
-          <option value="google-nmi-program.html">Google NMI Program</option>
-          <option value="allison-transmission-logistics.html">Allison Transmission Logistics</option>
-          <option value="about.html">About Page (about.html)</option>
-          <option value="contact.html">Contact Page (contact.html)</option>
+          <option value="pages/portfolio.html">My Work Page (portfolio.html)</option>
+          <option value="pages/product-management-at-optym.html">Product Management at Optym</option>
+          <option value="pages/procurement-at-tesla.html">Procurement at Tesla</option>
+          <option value="pages/carxchange-website-optimization.html">CarXchange Optimization</option>
+          <option value="pages/junior-finance-app-design.html">Junior Finance App</option>
+          <option value="pages/google-nmi-program.html">Google NMI Program</option>
+          <option value="pages/allison-transmission-logistics.html">Allison Transmission Logistics</option>
+          <option value="pages/about.html">About Page (about.html)</option>
+          <option value="pages/contact.html">Contact Page (contact.html)</option>
         </select>
       </div>
 
