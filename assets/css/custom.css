@@ -84,15 +84,31 @@ body.affix .birdseye-header {
   height: 100% !important;
 }
 
+.birdseye-header .hamburger,
+.hamburger {
+  display: none !important;
+}
+
 .birdseye-header .desktop-nav {
   display: flex !important;
   opacity: 1 !important;
   visibility: visible !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  max-width: 100% !important;
+}
+
+.birdseye-header .desktop-nav::-webkit-scrollbar {
+  display: none !important;
 }
 
 /* Inner Navigation List */
 .desktop-nav .wsite-menu-default {
   display: flex !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
   gap: 6px !important;
   align-items: center !important;
   list-style: none !important;
@@ -105,6 +121,8 @@ body.affix .birdseye-header {
 
 .desktop-nav .wsite-menu-item-wrap {
   border-radius: 24px !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
 }
 
 /* Nav Links - ALWAYS crisp white inside floating glass capsule dock */
@@ -114,10 +132,11 @@ body.affix .desktop-nav .wsite-menu-item {
   color: #ffffff !important;
   font-size: 13px !important;
   font-weight: 600 !important;
-  letter-spacing: 1.5px !important;
+  letter-spacing: 1.2px !important;
   text-transform: uppercase !important;
-  padding: 8px 18px !important;
+  padding: 8px 16px !important;
   text-decoration: none !important;
+  white-space: nowrap !important;
   opacity: 0.95 !important;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
   transition: all 0.25s ease !important;
@@ -580,7 +599,7 @@ img, iframe, video {
   }
 }
 
-/* iPhone 17 / iPhone 17 Pro (Viewport ~393px - 440px) */
+/* iPhone 17 / Mobile Screen Optimization (<= 440px) */
 @media (max-width: 440px) {
   .birdseye-header,
   .birdseye-header.is-scrolled,
@@ -588,13 +607,13 @@ img, iframe, video {
     top: max(10px, env(safe-area-inset-top, 10px)) !important;
     left: max(8px, env(safe-area-inset-left, 8px)) !important;
     right: max(8px, env(safe-area-inset-right, 8px)) !important;
-    height: 44px !important;
-    padding: 0 6px !important;
+    height: 46px !important;
+    padding: 0 8px !important;
     border-radius: 26px !important;
   }
 
   .desktop-nav .wsite-menu-default {
-    gap: 2px !important;
+    gap: 4px !important;
   }
 
   .desktop-nav .wsite-menu-item,
@@ -603,10 +622,11 @@ img, iframe, video {
     letter-spacing: 0.5px !important;
     padding: 6px 10px !important;
     border-radius: 18px !important;
+    white-space: nowrap !important;
   }
 
   .desktop-nav .btn-nav-accent {
-    padding: 6px 12px !important;
+    padding: 6px 11px !important;
   }
 
   /* Responsive Fluid Hero Typography for iPhone 17 */
