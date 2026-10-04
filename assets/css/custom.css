@@ -31,7 +31,7 @@ body {
   background-color: var(--nordic-bg-canvas);
 }
 
-/* Header & Navigation (50% Transparent Outer Header Bar with Pill Nav) */
+/* Header & Navigation (50% Transparent Outer Header Bar contouring Pill Nav) */
 .birdseye-header,
 .birdseye-header.is-scrolled,
 body.affix .birdseye-header {
@@ -41,16 +41,18 @@ body.affix .birdseye-header {
   width: 100% !important;
   z-index: 1000 !important;
   background: rgba(15, 23, 42, 0.50) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-bottom-left-radius: 28px !important;
+  border-bottom-right-radius: 28px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
   transition: all 0.35s ease-in-out !important;
 }
 
 .birdseye-header .nav-wrap {
   background: transparent !important;
-  padding: 18px 0 !important;
+  padding: 6px 0 !important;
 }
 
 .birdseye-header .desktop-nav {
