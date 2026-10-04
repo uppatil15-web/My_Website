@@ -136,11 +136,11 @@ body.affix .birdseye-header {
 .birdseye-header.is-scrolled .desktop-nav .wsite-menu-item,
 body.affix .desktop-nav .wsite-menu-item {
   color: #ffffff !important;
-  font-size: clamp(11px, 0.8vw + 4px, 13px) !important;
+  font-size: 13.5px !important;
   font-weight: 600 !important;
-  letter-spacing: clamp(0.5px, 0.08vw, 1.2px) !important;
+  letter-spacing: 1.2px !important;
   text-transform: uppercase !important;
-  padding: clamp(6px, 0.5vw + 2px, 8px) clamp(10px, 0.8vw + 4px, 18px) !important;
+  padding: 8px 16px !important;
   text-decoration: none !important;
   white-space: nowrap !important;
   opacity: 0.95 !important;
@@ -605,20 +605,34 @@ img, iframe, video {
   }
 
   .desktop-nav .wsite-menu-default {
-    gap: 4px !important;
+    gap: 5px !important;
     overflow: visible !important;
   }
 
   .desktop-nav .wsite-menu-item,
   .birdseye-header.is-scrolled .desktop-nav .wsite-menu-item {
-    font-size: 11px !important;
-    letter-spacing: 0.5px !important;
-    padding: 5px 10px !important;
+    font-size: 12px !important;
+    letter-spacing: 0.8px !important;
+    padding: 6px 12px !important;
     border-radius: 20px !important;
     white-space: nowrap !important;
   }
 
   .desktop-nav .btn-nav-accent {
+    padding: 6px 12px !important;
+  }
+}
+
+/* Smartphone / iPhone SE (<= 440px) */
+@media (max-width: 440px) {
+  .desktop-nav .wsite-menu-default {
+    gap: 3px !important;
+  }
+
+  .desktop-nav .wsite-menu-item,
+  .birdseye-header.is-scrolled .desktop-nav .wsite-menu-item {
+    font-size: 11.5px !important;
+    letter-spacing: 0.5px !important;
     padding: 5px 10px !important;
   }
 }
