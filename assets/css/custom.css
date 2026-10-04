@@ -111,7 +111,7 @@ body.affix .birdseye-header {
   display: flex !important;
   flex-wrap: nowrap !important;
   white-space: nowrap !important;
-  gap: 8px !important;
+  gap: 6px !important;
   align-items: center !important;
   justify-content: flex-end !important;
   list-style: none !important;
@@ -120,6 +120,9 @@ body.affix .birdseye-header {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
+  width: auto !important;
+  max-width: 100% !important;
+  overflow: visible !important;
 }
 
 .desktop-nav .wsite-menu-item-wrap {
@@ -602,20 +605,21 @@ img, iframe, video {
   }
 
   .desktop-nav .wsite-menu-default {
-    gap: 5px !important;
+    gap: 4px !important;
+    overflow: visible !important;
   }
 
   .desktop-nav .wsite-menu-item,
   .birdseye-header.is-scrolled .desktop-nav .wsite-menu-item {
-    font-size: 11.5px !important;
-    letter-spacing: 0.6px !important;
-    padding: 6px 12px !important;
+    font-size: 11px !important;
+    letter-spacing: 0.5px !important;
+    padding: 5px 10px !important;
     border-radius: 20px !important;
     white-space: nowrap !important;
   }
 
   .desktop-nav .btn-nav-accent {
-    padding: 6px 12px !important;
+    padding: 5px 10px !important;
   }
 }
 
