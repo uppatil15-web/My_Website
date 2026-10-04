@@ -31,7 +31,7 @@ body {
   background-color: var(--nordic-bg-canvas);
 }
 
-/* Header & Navigation (100% Transparent Bar, Dynamic Text Color on Scroll) */
+/* Header & Navigation (100% Transparent Bar, Floating Nordic Glass Capsule Nav) */
 .birdseye-header,
 .birdseye-header.is-scrolled,
 body.affix .birdseye-header {
@@ -48,23 +48,37 @@ body.affix .birdseye-header {
   transition: all 0.35s ease-in-out !important;
 }
 
+.birdseye-header .nav-wrap {
+  background: transparent !important;
+  padding: 18px 0 !important;
+}
+
 .birdseye-header .desktop-nav {
   display: flex !important;
   opacity: 1 !important;
   visibility: visible !important;
 }
 
+/* Floating Nordic Dark Glass Capsule for Navigation Menu */
 .desktop-nav .wsite-menu-default {
   display: flex !important;
-  gap: 16px !important;
+  gap: 6px !important;
   align-items: center !important;
   list-style: none !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 6px 14px !important;
+  background: rgba(15, 23, 42, 0.75) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: 40px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* Default Menu Links (over dark hero photo at top) */
-.desktop-nav .wsite-menu-item {
+/* Nav Links - ALWAYS crisp white inside dark glass capsule */
+.desktop-nav .wsite-menu-item,
+.birdseye-header.is-scrolled .desktop-nav .wsite-menu-item,
+body.affix .desktop-nav .wsite-menu-item {
   color: #ffffff !important;
   font-size: 13px !important;
   font-weight: 600 !important;
@@ -73,52 +87,38 @@ body.affix .birdseye-header {
   padding: 8px 18px !important;
   text-decoration: none !important;
   opacity: 0.95 !important;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
   transition: all 0.25s ease !important;
   display: inline-block !important;
+  border-radius: 20px !important;
 }
 
-.desktop-nav .wsite-menu-item:hover {
-  opacity: 1 !important;
-  color: #38bdf8 !important;
-}
-
-/* Scrolled Menu Links (dynamically adapts text color over light content without white bar) */
-.birdseye-header.is-scrolled .desktop-nav .wsite-menu-item,
-body.affix .desktop-nav .wsite-menu-item {
-  color: #0f172a !important;
-  font-weight: 700 !important;
-  text-shadow: none !important;
-}
-
+.desktop-nav .wsite-menu-item:hover,
 .birdseye-header.is-scrolled .desktop-nav .wsite-menu-item:hover,
 body.affix .desktop-nav .wsite-menu-item:hover {
-  color: #0d9488 !important;
+  opacity: 1 !important;
+  color: #38bdf8 !important;
+  background: rgba(255, 255, 255, 0.12) !important;
 }
 
-.desktop-nav li.wsite-menu-link-active .wsite-menu-item {
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
-  background: rgba(255, 255, 255, 0.15) !important;
-  border-radius: 4px !important;
+.desktop-nav li.wsite-menu-link-active .wsite-menu-item,
+.birdseye-header.is-scrolled li.wsite-menu-link-active .wsite-menu-item,
+body.affix li.wsite-menu-link-active .wsite-menu-item {
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  border-radius: 20px !important;
   opacity: 1 !important;
 }
 
-.birdseye-header.is-scrolled li.wsite-menu-link-active .wsite-menu-item,
-body.affix li.wsite-menu-link-active .wsite-menu-item {
-  border: 1px solid #0f172a !important;
-  background: rgba(15, 23, 42, 0.06) !important;
-  color: #0f172a !important;
-  text-shadow: none !important;
-}
-
-/* Styled Resume & Contact Top-Right Buttons */
+/* Styled Resume & Contact Top-Right Buttons inside glass capsule */
 .desktop-nav .btn-nav-accent {
   background: #0d9488 !important;
   color: #ffffff !important;
-  border-radius: 6px !important;
+  border-radius: 20px !important;
   padding: 8px 20px !important;
   font-weight: 700 !important;
-  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.35) !important;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.4) !important;
   opacity: 1 !important;
 }
 
