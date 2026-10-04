@@ -74,14 +74,7 @@ body.affix .birdseye-header {
   display: flex !important;
   align-items: center !important;
   justify-content: flex-end !important;
-  overflow-x: auto !important;
-  -webkit-overflow-scrolling: touch !important;
-  scrollbar-width: none !important;
-  -ms-overflow-style: none !important;
-}
-
-.birdseye-header .nav-wrap::-webkit-scrollbar {
-  display: none !important;
+  overflow: visible !important;
 }
 
 .birdseye-header .container {
@@ -93,6 +86,7 @@ body.affix .birdseye-header {
   align-items: center !important;
   justify-content: flex-end !important;
   height: 100% !important;
+  overflow: visible !important;
 }
 
 .birdseye-header .hamburger,
@@ -109,6 +103,7 @@ body.affix .birdseye-header {
   margin-left: auto !important;
   flex-shrink: 0 !important;
   max-width: 100% !important;
+  overflow: visible !important;
 }
 
 /* Inner Navigation List */
@@ -116,7 +111,7 @@ body.affix .birdseye-header {
   display: flex !important;
   flex-wrap: nowrap !important;
   white-space: nowrap !important;
-  gap: 6px !important;
+  gap: 8px !important;
   align-items: center !important;
   justify-content: flex-end !important;
   list-style: none !important;
