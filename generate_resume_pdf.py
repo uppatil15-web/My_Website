@@ -97,7 +97,7 @@ def create_resume():
     # Header
     story.append(Paragraph("Utkarsh Patil", name_style))
     story.append(Spacer(1, 4))
-    story.append(Paragraph("+1-765-810-1705 | u.p.patil15@gmail.com | www.linkedin.com/in/upatil", contact_style))
+    story.append(Paragraph("+1-765-810-1705 | u.p.patil15@gmail.com | linkedin.com/in/upatil | Dallas, TX (Open to Relocation to Denmark)", contact_style))
     story.append(Spacer(1, 8))
 
     # Function for section header with line
