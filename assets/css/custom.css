@@ -36,11 +36,11 @@ body {
 .birdseye-header.is-scrolled,
 body.affix .birdseye-header {
   position: fixed !important;
-  top: max(16px, env(safe-area-inset-top, 16px)) !important;
-  left: max(16px, env(safe-area-inset-left, 16px)) !important;
-  right: max(16px, env(safe-area-inset-right, 16px)) !important;
+  top: max(12px, env(safe-area-inset-top, 12px)) !important;
+  left: max(12px, env(safe-area-inset-left, 12px)) !important;
+  right: max(12px, env(safe-area-inset-right, 12px)) !important;
   width: auto !important;
-  max-width: calc(100vw - 32px) !important;
+  max-width: calc(100vw - 24px) !important;
   height: clamp(44px, 5vw, 52px) !important;
   z-index: 1000 !important;
   background: linear-gradient(90deg, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0.35) 45%, rgba(15, 23, 42, 0.65) 100%) !important;
@@ -48,14 +48,14 @@ body.affix .birdseye-header {
   -webkit-backdrop-filter: blur(14px) !important;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   border-radius: 40px !important;
-  padding: 0 8px !important;
+  padding: 0 6px !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
   transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: flex-start !important;
+  justify-content: flex-end !important;
   box-sizing: border-box !important;
-  overflow: hidden !important;
+  overflow: visible !important;
 }
 
 .birdseye-header.is-scrolled,
@@ -73,7 +73,7 @@ body.affix .birdseye-header {
   height: 100% !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: flex-start !important;
+  justify-content: flex-end !important;
   overflow-x: auto !important;
   -webkit-overflow-scrolling: touch !important;
   scrollbar-width: none !important;
@@ -91,7 +91,7 @@ body.affix .birdseye-header {
   max-width: none !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: flex-start !important;
+  justify-content: flex-end !important;
   height: 100% !important;
 }
 
@@ -104,7 +104,8 @@ body.affix .birdseye-header {
   display: flex !important;
   opacity: 1 !important;
   visibility: visible !important;
-  margin-left: auto !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
   flex-shrink: 0 !important;
   max-width: 100% !important;
 }
@@ -114,7 +115,7 @@ body.affix .birdseye-header {
   display: flex !important;
   flex-wrap: nowrap !important;
   white-space: nowrap !important;
-  gap: clamp(2px, 0.6vw, 6px) !important;
+  gap: clamp(2px, 0.4vw, 5px) !important;
   align-items: center !important;
   list-style: none !important;
   margin: 0 !important;
@@ -135,11 +136,11 @@ body.affix .birdseye-header {
 .birdseye-header.is-scrolled .desktop-nav .wsite-menu-item,
 body.affix .desktop-nav .wsite-menu-item {
   color: #ffffff !important;
-  font-size: clamp(10px, 0.9vw + 5px, 13px) !important;
+  font-size: clamp(10px, 0.8vw + 4px, 12.5px) !important;
   font-weight: 600 !important;
-  letter-spacing: clamp(0.3px, 0.1vw, 1.2px) !important;
+  letter-spacing: clamp(0.2px, 0.08vw, 1px) !important;
   text-transform: uppercase !important;
-  padding: clamp(5px, 0.6vw + 2px, 8px) clamp(8px, 1vw + 4px, 16px) !important;
+  padding: clamp(5px, 0.5vw + 2px, 7px) clamp(7px, 0.8vw + 3px, 14px) !important;
   text-decoration: none !important;
   white-space: nowrap !important;
   opacity: 0.95 !important;
