@@ -133,14 +133,6 @@ body.affix .birdseye-header {
   flex-shrink: 0 !important;
 }
 
-.desktop-nav .wsite-menu-item-wrap:first-child {
-  margin-left: auto !important;
-}
-
-.desktop-nav .wsite-menu-item-wrap:last-child {
-  margin-right: 0 !important;
-}
-
 /* Nav Links - ALWAYS crisp white, big prominent pill shape */
 .desktop-nav .wsite-menu-item,
 .birdseye-header.is-scrolled .desktop-nav .wsite-menu-item,
