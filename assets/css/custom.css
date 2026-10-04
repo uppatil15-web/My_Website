@@ -31,7 +31,7 @@ body {
   background-color: var(--nordic-bg-canvas);
 }
 
-/* Header & Navigation (Floating Nordic Glass Pill Dock) */
+/* Header & Navigation (Floating Nordic Glass Pill Dock with Horizontal Transient Transparency) */
 .birdseye-header,
 .birdseye-header.is-scrolled,
 body.affix .birdseye-header {
@@ -43,10 +43,10 @@ body.affix .birdseye-header {
   max-width: calc(100vw - 32px) !important;
   height: 52px !important;
   z-index: 1000 !important;
-  background: rgba(15, 23, 42, 0.75) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.20) !important;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0.35) 45%, rgba(15, 23, 42, 0.65) 100%) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
   border-radius: 40px !important;
   padding: 0 12px !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
@@ -60,7 +60,7 @@ body.affix .birdseye-header {
 
 .birdseye-header.is-scrolled,
 body.affix .birdseye-header {
-  background: rgba(15, 23, 42, 0.88) !important;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.08) 0%, rgba(15, 23, 42, 0.55) 45%, rgba(15, 23, 42, 0.85) 100%) !important;
   border-color: rgba(255, 255, 255, 0.25) !important;
   box-shadow: 0 10px 36px rgba(0, 0, 0, 0.45) !important;
 }
@@ -128,16 +128,16 @@ body.affix .birdseye-header {
   flex-shrink: 0 !important;
 }
 
-/* Nav Links - ALWAYS crisp white, distinct glass pill shape for ALL items */
+/* Nav Links - ALWAYS crisp white inside floating glass capsule dock */
 .desktop-nav .wsite-menu-item,
 .birdseye-header.is-scrolled .desktop-nav .wsite-menu-item,
 body.affix .desktop-nav .wsite-menu-item {
   color: #ffffff !important;
-  font-size: 13px !important;
+  font-size: clamp(11px, 0.8vw + 4px, 13px) !important;
   font-weight: 600 !important;
-  letter-spacing: 1.2px !important;
+  letter-spacing: clamp(0.5px, 0.08vw, 1.2px) !important;
   text-transform: uppercase !important;
-  padding: 8px 18px !important;
+  padding: clamp(6px, 0.5vw + 2px, 8px) clamp(10px, 0.8vw + 4px, 18px) !important;
   text-decoration: none !important;
   white-space: nowrap !important;
   opacity: 0.95 !important;
@@ -146,8 +146,8 @@ body.affix .desktop-nav .wsite-menu-item {
   display: inline-block !important;
   border-radius: 24px !important;
   box-sizing: border-box !important;
-  background: rgba(255, 255, 255, 0.12) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  background: transparent !important;
+  border: none !important;
 }
 
 .desktop-nav .wsite-menu-item:hover,
@@ -155,19 +155,18 @@ body.affix .desktop-nav .wsite-menu-item {
 body.affix .desktop-nav .wsite-menu-item:hover {
   opacity: 1 !important;
   color: #ffffff !important;
-  background: rgba(255, 255, 255, 0.25) !important;
-  border-color: rgba(255, 255, 255, 0.40) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 24px !important;
 }
 
 .desktop-nav li.wsite-menu-link-active .wsite-menu-item,
 .birdseye-header.is-scrolled li.wsite-menu-link-active .wsite-menu-item,
 body.affix li.wsite-menu-link-active .wsite-menu-item {
-  border: 1px solid rgba(255, 255, 255, 0.50) !important;
-  background: rgba(255, 255, 255, 0.28) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  background: rgba(255, 255, 255, 0.20) !important;
   color: #ffffff !important;
   border-radius: 24px !important;
   opacity: 1 !important;
-  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15) !important;
 }
 
 /* Styled Resume & Contact Buttons (Slate Monochrome) */
