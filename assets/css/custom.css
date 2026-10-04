@@ -36,19 +36,19 @@ body {
 .birdseye-header.is-scrolled,
 body.affix .birdseye-header {
   position: fixed !important;
-  top: max(12px, env(safe-area-inset-top, 12px)) !important;
-  left: max(12px, env(safe-area-inset-left, 12px)) !important;
-  right: max(12px, env(safe-area-inset-right, 12px)) !important;
+  top: max(16px, env(safe-area-inset-top, 16px)) !important;
+  left: max(16px, env(safe-area-inset-left, 16px)) !important;
+  right: max(16px, env(safe-area-inset-right, 16px)) !important;
   width: auto !important;
-  max-width: calc(100vw - 24px) !important;
-  height: clamp(44px, 5vw, 52px) !important;
+  max-width: calc(100vw - 32px) !important;
+  height: 52px !important;
   z-index: 1000 !important;
   background: linear-gradient(90deg, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0.35) 45%, rgba(15, 23, 42, 0.65) 100%) !important;
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   border-radius: 40px !important;
-  padding: 0 6px !important;
+  padding: 0 10px !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
   transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease !important;
   display: flex !important;
@@ -106,6 +106,7 @@ body.affix .birdseye-header {
   visibility: visible !important;
   align-items: center !important;
   justify-content: flex-end !important;
+  margin-left: auto !important;
   flex-shrink: 0 !important;
   max-width: 100% !important;
 }
@@ -115,8 +116,9 @@ body.affix .birdseye-header {
   display: flex !important;
   flex-wrap: nowrap !important;
   white-space: nowrap !important;
-  gap: clamp(2px, 0.4vw, 5px) !important;
+  gap: 6px !important;
   align-items: center !important;
+  justify-content: flex-end !important;
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -131,16 +133,24 @@ body.affix .birdseye-header {
   flex-shrink: 0 !important;
 }
 
-/* Nav Links - ALWAYS crisp white inside floating glass capsule dock */
+.desktop-nav .wsite-menu-item-wrap:first-child {
+  margin-left: auto !important;
+}
+
+.desktop-nav .wsite-menu-item-wrap:last-child {
+  margin-right: 0 !important;
+}
+
+/* Nav Links - ALWAYS crisp white, big prominent pill shape */
 .desktop-nav .wsite-menu-item,
 .birdseye-header.is-scrolled .desktop-nav .wsite-menu-item,
 body.affix .desktop-nav .wsite-menu-item {
   color: #ffffff !important;
-  font-size: clamp(10px, 0.8vw + 4px, 12.5px) !important;
+  font-size: 13px !important;
   font-weight: 600 !important;
-  letter-spacing: clamp(0.2px, 0.08vw, 1px) !important;
+  letter-spacing: 1.2px !important;
   text-transform: uppercase !important;
-  padding: clamp(5px, 0.5vw + 2px, 7px) clamp(7px, 0.8vw + 3px, 14px) !important;
+  padding: 8px 18px !important;
   text-decoration: none !important;
   white-space: nowrap !important;
   opacity: 0.95 !important;
