@@ -31,29 +31,46 @@ body {
   background-color: var(--nordic-bg-canvas);
 }
 
-/* Header & Navigation (50% Transparent Outer Header Bar with Smooth Rounded Pill Edges) */
+/* Header & Navigation (Option 1: Floating Asymmetric Nordic Glass Capsule Dock) */
 .birdseye-header,
 .birdseye-header.is-scrolled,
 body.affix .birdseye-header {
   position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
+  top: 16px !important;
+  right: 24px !important;
+  left: auto !important;
+  width: auto !important;
   z-index: 1000 !important;
-  background: rgba(15, 23, 42, 0.50) !important;
+  background: rgba(15, 23, 42, 0.60) !important;
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
-  border: none !important;
-  border-bottom: none !important;
-  border-bottom-left-radius: 36px !important;
-  border-bottom-right-radius: 36px !important;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 40px !important;
+  padding: 6px 10px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
   transition: all 0.35s ease-in-out !important;
+}
+
+.birdseye-header.is-scrolled,
+body.affix .birdseye-header {
+  background: rgba(15, 23, 42, 0.88) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.45) !important;
 }
 
 .birdseye-header .nav-wrap {
   background: transparent !important;
-  padding: 8px 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.birdseye-header .container {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 .birdseye-header .desktop-nav {
@@ -62,10 +79,10 @@ body.affix .birdseye-header {
   visibility: visible !important;
 }
 
-/* Inner Navigation Menu Container */
+/* Inner Navigation List */
 .desktop-nav .wsite-menu-default {
   display: flex !important;
-  gap: 8px !important;
+  gap: 6px !important;
   align-items: center !important;
   list-style: none !important;
   margin: 0 !important;
@@ -79,7 +96,7 @@ body.affix .birdseye-header {
   border-radius: 24px !important;
 }
 
-/* Nav Links - Crisp white inside 50% transparent rounded header bar */
+/* Nav Links - ALWAYS crisp white inside floating glass capsule dock */
 .desktop-nav .wsite-menu-item,
 .birdseye-header.is-scrolled .desktop-nav .wsite-menu-item,
 body.affix .desktop-nav .wsite-menu-item {
@@ -101,8 +118,8 @@ body.affix .desktop-nav .wsite-menu-item {
 .birdseye-header.is-scrolled .desktop-nav .wsite-menu-item:hover,
 body.affix .desktop-nav .wsite-menu-item:hover {
   opacity: 1 !important;
-  color: #38bdf8 !important;
-  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.15) !important;
   border-radius: 24px !important;
 }
 
@@ -110,15 +127,15 @@ body.affix .desktop-nav .wsite-menu-item:hover {
 .birdseye-header.is-scrolled li.wsite-menu-link-active .wsite-menu-item,
 body.affix li.wsite-menu-link-active .wsite-menu-item {
   border: 1px solid rgba(255, 255, 255, 0.35) !important;
-  background: rgba(255, 255, 255, 0.18) !important;
+  background: rgba(255, 255, 255, 0.20) !important;
   color: #ffffff !important;
   border-radius: 24px !important;
   opacity: 1 !important;
 }
 
-/* Styled Resume & Contact Top-Right Buttons (Slate Monochrome) */
+/* Styled Resume & Contact Buttons (Slate Monochrome) */
 .desktop-nav .btn-nav-accent {
-  background: #0f172a !important;
+  background: rgba(255, 255, 255, 0.12) !important;
   color: #ffffff !important;
   border: 1px solid rgba(255, 255, 255, 0.25) !important;
   border-radius: 24px !important;
@@ -129,9 +146,24 @@ body.affix li.wsite-menu-link-active .wsite-menu-item {
 }
 
 .desktop-nav .btn-nav-accent:hover {
-  background: #1e293b !important;
+  background: rgba(255, 255, 255, 0.25) !important;
   color: #ffffff !important;
   transform: translateY(-1px);
+}
+
+/* Mobile Responsive Header Dock Fallback */
+@media (max-width: 991px) {
+  .birdseye-header,
+  .birdseye-header.is-scrolled,
+  body.affix .birdseye-header {
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    padding: 12px 20px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2) !important;
+  }
 }
 
 /* Hero Banners */
