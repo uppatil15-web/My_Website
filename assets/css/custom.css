@@ -277,21 +277,22 @@ body.affix li.wsite-menu-link-active .wsite-menu-item {
   color: #ffffff;
 }
 
-/* Portfolio Cards */
+/* Portfolio Cards (Quiet Swiss Grid Minimalism) */
 .project-card {
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 6px;
   overflow: hidden;
   border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  transition: all 0.3s ease;
+  box-shadow: none;
+  transition: all 0.25s ease;
   display: flex;
   flex-direction: column;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
 }
 
 .project-card-img {
@@ -309,11 +310,11 @@ body.affix li.wsite-menu-link-active .wsite-menu-item {
 }
 
 .project-tag {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  color: #0284c7;
+  color: #0d9488;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   margin-bottom: 8px;
 }
 
