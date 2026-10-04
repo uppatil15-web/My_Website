@@ -31,7 +31,7 @@ body {
   background-color: var(--nordic-bg-canvas);
 }
 
-/* Header & Navigation (50% Transparent Outer Header Bar contouring Pill Nav) */
+/* Header & Navigation (Clean Floating Pill Navigation - Zero Square Corners) */
 .birdseye-header,
 .birdseye-header.is-scrolled,
 body.affix .birdseye-header {
@@ -40,19 +40,19 @@ body.affix .birdseye-header {
   left: 0 !important;
   width: 100% !important;
   z-index: 1000 !important;
-  background: rgba(15, 23, 42, 0.50) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
-  border-bottom-left-radius: 28px !important;
-  border-bottom-right-radius: 28px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
   transition: all 0.35s ease-in-out !important;
 }
 
 .birdseye-header .nav-wrap {
   background: transparent !important;
-  padding: 6px 0 !important;
+  padding: 16px 0 !important;
 }
 
 .birdseye-header .desktop-nav {
@@ -75,6 +75,12 @@ body.affix .birdseye-header {
   border: 1px solid rgba(255, 255, 255, 0.22) !important;
   border-radius: 40px !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+  overflow: hidden !important;
+}
+
+.desktop-nav .wsite-menu-item-wrap {
+  border-radius: 20px !important;
+  overflow: hidden !important;
 }
 
 /* Nav Links - ALWAYS crisp white inside dark glass capsule */
@@ -101,6 +107,7 @@ body.affix .desktop-nav .wsite-menu-item:hover {
   opacity: 1 !important;
   color: #38bdf8 !important;
   background: rgba(255, 255, 255, 0.12) !important;
+  border-radius: 20px !important;
 }
 
 .desktop-nav li.wsite-menu-link-active .wsite-menu-item,
