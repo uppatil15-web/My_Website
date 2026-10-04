@@ -408,6 +408,15 @@ app.get('/', (req, res) => {
       height: 90%;
       border: 1px solid #334155;
     }
+
+    iframe.device-iphone17 {
+      width: 393px;
+      height: 852px;
+      max-height: 92%;
+      border-radius: 44px;
+      border: 2px solid #334155;
+      box-shadow: 0 0 0 10px #1e293b, 0 20px 40px rgba(0,0,0,0.6);
+    }
   </style>
 </head>
 <body>
@@ -457,6 +466,7 @@ app.get('/', (req, res) => {
       <!-- Viewport Switcher -->
       <div class="viewport-group">
         <button class="vp-btn active" onclick="setViewport('desktop', this)">🖥️ Desktop</button>
+        <button class="vp-btn" onclick="setViewport('iphone17', this)">📱 iPhone 17</button>
         <button class="vp-btn" onclick="setViewport('tablet', this)">📱 Tablet</button>
         <button class="vp-btn" onclick="setViewport('mobile', this)">📲 Mobile</button>
       </div>
@@ -501,6 +511,8 @@ app.get('/', (req, res) => {
 
       if (mode === 'desktop') {
         frame.className = '';
+      } else if (mode === 'iphone17') {
+        frame.className = 'device-iphone17';
       } else if (mode === 'tablet') {
         frame.className = 'device-tablet';
       } else if (mode === 'mobile') {
