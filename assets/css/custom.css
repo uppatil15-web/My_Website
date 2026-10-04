@@ -31,7 +31,7 @@ body {
   background-color: var(--nordic-bg-canvas);
 }
 
-/* Header & Navigation (Floating Nordic Glass Pill Dock with Horizontal Transient Transparency) */
+/* Header & Navigation (Floating Nordic Glass Pill Dock) */
 .birdseye-header,
 .birdseye-header.is-scrolled,
 body.affix .birdseye-header {
@@ -43,12 +43,12 @@ body.affix .birdseye-header {
   max-width: calc(100vw - 32px) !important;
   height: 52px !important;
   z-index: 1000 !important;
-  background: linear-gradient(90deg, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0.35) 45%, rgba(15, 23, 42, 0.65) 100%) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  background: rgba(15, 23, 42, 0.75) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.20) !important;
   border-radius: 40px !important;
-  padding: 0 10px !important;
+  padding: 0 12px !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
   transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease !important;
   display: flex !important;
@@ -60,7 +60,7 @@ body.affix .birdseye-header {
 
 .birdseye-header.is-scrolled,
 body.affix .birdseye-header {
-  background: linear-gradient(90deg, rgba(15, 23, 42, 0.08) 0%, rgba(15, 23, 42, 0.55) 45%, rgba(15, 23, 42, 0.85) 100%) !important;
+  background: rgba(15, 23, 42, 0.88) !important;
   border-color: rgba(255, 255, 255, 0.25) !important;
   box-shadow: 0 10px 36px rgba(0, 0, 0, 0.45) !important;
 }
@@ -128,7 +128,7 @@ body.affix .birdseye-header {
   flex-shrink: 0 !important;
 }
 
-/* Nav Links - ALWAYS crisp white, big prominent pill shape */
+/* Nav Links - ALWAYS crisp white, distinct glass pill shape for ALL items */
 .desktop-nav .wsite-menu-item,
 .birdseye-header.is-scrolled .desktop-nav .wsite-menu-item,
 body.affix .desktop-nav .wsite-menu-item {
@@ -146,6 +146,8 @@ body.affix .desktop-nav .wsite-menu-item {
   display: inline-block !important;
   border-radius: 24px !important;
   box-sizing: border-box !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
 }
 
 .desktop-nav .wsite-menu-item:hover,
@@ -153,18 +155,19 @@ body.affix .desktop-nav .wsite-menu-item {
 body.affix .desktop-nav .wsite-menu-item:hover {
   opacity: 1 !important;
   color: #ffffff !important;
-  background: rgba(255, 255, 255, 0.15) !important;
-  border-radius: 24px !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.40) !important;
 }
 
 .desktop-nav li.wsite-menu-link-active .wsite-menu-item,
 .birdseye-header.is-scrolled li.wsite-menu-link-active .wsite-menu-item,
 body.affix li.wsite-menu-link-active .wsite-menu-item {
-  border: 1px solid rgba(255, 255, 255, 0.35) !important;
-  background: rgba(255, 255, 255, 0.20) !important;
+  border: 1px solid rgba(255, 255, 255, 0.50) !important;
+  background: rgba(255, 255, 255, 0.28) !important;
   color: #ffffff !important;
   border-radius: 24px !important;
   opacity: 1 !important;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15) !important;
 }
 
 /* Styled Resume & Contact Buttons (Slate Monochrome) */
@@ -586,8 +589,8 @@ img, iframe, video {
   height: auto;
 }
 
-/* Base Mobile & Half-Screen Dock Adaptations (<= 768px) */
-@media (max-width: 768px) {
+/* Base Mobile & Half-Screen Dock Adaptations (<= 1024px) */
+@media (max-width: 1024px) {
   .birdseye-header,
   .birdseye-header.is-scrolled,
   body.affix .birdseye-header {
@@ -600,12 +603,12 @@ img, iframe, video {
   }
 
   .desktop-nav .wsite-menu-default {
-    gap: 4px !important;
+    gap: 5px !important;
   }
 
   .desktop-nav .wsite-menu-item,
   .birdseye-header.is-scrolled .desktop-nav .wsite-menu-item {
-    font-size: 11px !important;
+    font-size: 11.5px !important;
     letter-spacing: 0.6px !important;
     padding: 6px 12px !important;
     border-radius: 20px !important;
