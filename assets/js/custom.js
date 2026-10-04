@@ -1,3 +1,19 @@
+// Reactive Scroll-Responsive Header Handler
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.querySelector('.birdseye-header');
+  if (header) {
+    function handleScroll() {
+      if (window.scrollY > 50) {
+        header.classList.add('is-scrolled');
+      } else {
+        header.classList.remove('is-scrolled');
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  }
+});
+
 jQuery(function($) {
 
     // Fixed nav
