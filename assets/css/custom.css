@@ -42,7 +42,7 @@ body.affix .birdseye-header {
   width: auto !important;
   height: 52px !important;
   z-index: 1000 !important;
-  background: linear-gradient(90deg, rgba(15, 23, 42, 0.10) 0%, rgba(15, 23, 42, 0.35) 45%, rgba(15, 23, 42, 0.65) 100%) !important;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0.35) 45%, rgba(15, 23, 42, 0.65) 100%) !important;
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
@@ -57,7 +57,7 @@ body.affix .birdseye-header {
 
 .birdseye-header.is-scrolled,
 body.affix .birdseye-header {
-  background: linear-gradient(90deg, rgba(15, 23, 42, 0.20) 0%, rgba(15, 23, 42, 0.55) 45%, rgba(15, 23, 42, 0.85) 100%) !important;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.08) 0%, rgba(15, 23, 42, 0.55) 45%, rgba(15, 23, 42, 0.85) 100%) !important;
   border-color: rgba(255, 255, 255, 0.25) !important;
   box-shadow: 0 10px 36px rgba(0, 0, 0, 0.45) !important;
 }
