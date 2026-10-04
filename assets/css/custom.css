@@ -31,29 +31,33 @@ body {
   background-color: var(--nordic-bg-canvas);
 }
 
-/* Header & Navigation (Option 1: Floating Asymmetric Nordic Glass Capsule Dock) */
+/* Header & Navigation (Floating Nordic Glass Pill Dock with Full-Width Translucent Backdrop) */
 .birdseye-header,
 .birdseye-header.is-scrolled,
 body.affix .birdseye-header {
   position: fixed !important;
   top: 16px !important;
+  left: 24px !important;
   right: 24px !important;
-  left: auto !important;
   width: auto !important;
+  height: 52px !important;
   z-index: 1000 !important;
-  background: rgba(15, 23, 42, 0.60) !important;
+  background: rgba(15, 23, 42, 0.45) !important;
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   border-radius: 40px !important;
-  padding: 6px 10px !important;
+  padding: 0 12px !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
   transition: all 0.35s ease-in-out !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
 }
 
 .birdseye-header.is-scrolled,
 body.affix .birdseye-header {
-  background: rgba(15, 23, 42, 0.88) !important;
+  background: rgba(15, 23, 42, 0.80) !important;
   border-color: rgba(255, 255, 255, 0.25) !important;
   box-shadow: 0 10px 36px rgba(0, 0, 0, 0.45) !important;
 }
@@ -62,15 +66,22 @@ body.affix .birdseye-header {
   background: transparent !important;
   padding: 0 !important;
   margin: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
 }
 
 .birdseye-header .container {
   padding: 0 !important;
   margin: 0 !important;
-  width: auto !important;
+  width: 100% !important;
   max-width: none !important;
   display: flex !important;
   align-items: center !important;
+  justify-content: flex-end !important;
+  height: 100% !important;
 }
 
 .birdseye-header .desktop-nav {
@@ -224,8 +235,8 @@ body.affix li.wsite-menu-link-active .wsite-menu-item {
 }
 
 .birdseye-header .nav-wrap {
-  background: transparent;
-  padding: 25px 0;
+  background: transparent !important;
+  padding: 0 !important;
 }
 
 .hero-name {
