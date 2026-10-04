@@ -116,19 +116,20 @@ body.affix li.wsite-menu-link-active .wsite-menu-item {
   opacity: 1 !important;
 }
 
-/* Styled Resume & Contact Top-Right Buttons */
+/* Styled Resume & Contact Top-Right Buttons (Slate Monochrome) */
 .desktop-nav .btn-nav-accent {
-  background: #0d9488 !important;
+  background: #0f172a !important;
   color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
   border-radius: 24px !important;
   padding: 8px 20px !important;
   font-weight: 700 !important;
-  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.4) !important;
+  box-shadow: none !important;
   opacity: 1 !important;
 }
 
 .desktop-nav .btn-nav-accent:hover {
-  background: #0f766e !important;
+  background: #1e293b !important;
   color: #ffffff !important;
   transform: translateY(-1px);
 }
@@ -234,9 +235,9 @@ body.affix li.wsite-menu-link-active .wsite-menu-item {
   letter-spacing: 1px;
 }
 
-/* Buttons */
+/* Buttons (Slate Monochrome) */
 .btn-primary {
-  background: #0284c7 !important;
+  background: #0f172a !important;
   color: #ffffff !important;
   border: none !important;
   padding: 14px 30px;
@@ -247,20 +248,20 @@ body.affix li.wsite-menu-link-active .wsite-menu-item {
   letter-spacing: 1px;
   text-transform: uppercase;
   display: inline-block;
-  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+  box-shadow: none;
   transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
-  background: #0369a1 !important;
+  background: #1e293b !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.45);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
 }
 
 .btn-project {
   display: inline-block;
-  background: #0f172a;
-  color: #ffffff;
+  background: #0f172a !important;
+  color: #ffffff !important;
   padding: 10px 20px;
   border-radius: 4px;
   font-size: 12px;
@@ -273,11 +274,11 @@ body.affix li.wsite-menu-link-active .wsite-menu-item {
 }
 
 .btn-project:hover {
-  background: #0284c7;
-  color: #ffffff;
+  background: #334155 !important;
+  color: #ffffff !important;
 }
 
-/* Portfolio Cards (Quiet Swiss Grid Minimalism) */
+/* Portfolio Cards (Quiet Swiss Grid Slate Monochrome) */
 .project-card {
   background: #ffffff;
   border-radius: 6px;
@@ -312,7 +313,7 @@ body.affix li.wsite-menu-link-active .wsite-menu-item {
 .project-tag {
   font-size: 11px;
   font-weight: 700;
-  color: #0d9488;
+  color: #475569 !important;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 8px;
