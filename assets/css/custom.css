@@ -210,55 +210,7 @@ body.affix li.wsite-menu-link-active .wsite-menu-item {
 
 
 /* Hero Banners */
-.banner-wrap {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url('../images/utkarsh-bg.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.banner-wrap.carxchange-banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.6)), url('/uploads/1/4/8/2/148248988/background-images/1185238085.jpg');
-}
-
-.banner-wrap.tesla-banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.65)), url('/uploads/1/4/8/2/148248988/background-images/1185238085.jpg');
-}
-
-.banner-content {
-  padding: 90px 0 70px;
-  text-align: center;
-}
-
-.banner-title {
-  font-size: 48px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 16px;
-  text-shadow: 0 4px 15px rgba(0,0,0,0.5);
-}
-
-.banner-title.highlight-blue {
-  color: #38bdf8;
-}
-
-.banner-title.highlight-red {
-  color: #f87171;
-}
-
-.banner-subtitle {
-  font-size: 18px;
-  color: rgba(255,255,255,0.9);
-  max-width: 650px;
-  margin: 0 auto;
-  font-weight: 300;
-  line-height: 1.6;
-}
-
-.wrapper {
-  background: white !important;
-}
-
-/* Home Page Hero Banner */
+.banner-wrap,
 .banner-wrap.home-banner,
 .home-banner {
   display: flex !important;
@@ -269,8 +221,14 @@ body.affix li.wsite-menu-link-active .wsite-menu-item {
   background-size: cover !important;
   background-position: center center !important;
   padding-top: 140px !important;
-  padding-bottom: 150px !important;
+  padding-bottom: 140px !important;
   box-sizing: border-box !important;
+}
+
+.banner-wrap .container,
+.banner-wrap .banner {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .birdseye-header .nav-wrap {
