@@ -31,9 +31,11 @@ body {
   background-color: var(--nordic-bg-canvas);
 }
 
-/* Header & Navigation (Floating Nordic Glass Pill Dock with 28px Gradient Blur) */
+/* Header & Navigation (Floating Glass Pill Dock via Pseudo-Element Isolation) */
 .birdseye-header,
+header.birdseye-header,
 .birdseye-header.is-scrolled,
+header.birdseye-header.is-scrolled,
 body.affix .birdseye-header {
   position: fixed !important;
   top: max(16px, env(safe-area-inset-top, 16px)) !important;
@@ -43,23 +45,39 @@ body.affix .birdseye-header {
   max-width: calc(100vw - 32px) !important;
   height: 52px !important;
   z-index: 1000 !important;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  background-clip: border-box !important;
-  background-origin: border-box !important;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 20px !important;
-  background-image: linear-gradient(90deg, rgba(15, 23, 42, 0.10) 0%, rgba(15, 23, 42, 0.35) 45%, rgba(15, 23, 42, 0.65) 100%) !important;
-  background-color: transparent !important;
-  outline: none !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  border-radius: 28px !important;
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  overflow: visible !important;
+  isolation: isolate !important; /* Creates a clean stacking context for the pseudo-element */
   padding: 0 16px !important;
-  transition: background-image 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease !important;
+  transition: all 0.35s ease !important;
   display: flex !important;
   align-items: center !important;
   justify-content: flex-end !important;
   box-sizing: border-box !important;
-  overflow: hidden !important;
+}
+
+/* Move all visuals to the pseudo-element */
+.birdseye-header::after,
+header.birdseye-header::after,
+.birdseye-header.is-scrolled::after,
+header.birdseye-header.is-scrolled::after,
+body.affix .birdseye-header::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important; /* Places the background behind the nav links */
+  border-radius: 28px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.55) 45%, rgba(15, 23, 42, 0.85) 100%) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+  background-clip: padding-box !important;
+  pointer-events: none !important;
 }
 
 .birdseye-header .nav-wrap {
