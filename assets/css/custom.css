@@ -258,9 +258,15 @@ body.affix li.wsite-menu-link-active .wsite-menu-item {
   background: white !important;
 }
 
-/* Home Page Hero */
-.home-banner, .banner-wrap.home-banner {
-  display: none !important;
+/* Home Page Hero Banner */
+.banner-wrap.home-banner,
+.home-banner {
+  display: block !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url('/uploads/1/4/8/2/148248988/background-images/background-images/1685696077.jpg'), url('../uploads/1/4/8/2/148248988/background-images/background-images/1685696077.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  padding-top: 110px !important;
+  padding-bottom: 80px !important;
 }
 
 .birdseye-header .nav-wrap {
