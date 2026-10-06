@@ -211,7 +211,7 @@ body.affix li.wsite-menu-link-active .wsite-menu-item {
 
 /* Hero Banners */
 .banner-wrap {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url('/uploads/1/4/8/2/148248988/background-images/background-images/1685696077.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url('../images/utkarsh-bg.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -262,7 +262,7 @@ body.affix li.wsite-menu-link-active .wsite-menu-item {
 .banner-wrap.home-banner,
 .home-banner {
   display: block !important;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url('/uploads/1/4/8/2/148248988/background-images/background-images/1685696077.jpg'), url('../uploads/1/4/8/2/148248988/background-images/background-images/1685696077.jpg') !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url('../images/utkarsh-bg.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
   padding-top: 110px !important;
