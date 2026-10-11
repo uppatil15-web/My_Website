@@ -162,7 +162,7 @@ app.get('/render', async (req, res) => {
 
     currentVariation = variation;
 
-    const pagePath = path.join(EXPORT_DIR, pageName);
+    const pagePath = path.join(ROOT_DIR, pageName);
     if (!fs.existsSync(pagePath)) {
       return res.status(404).send(`HTML page ${pageName} not found in export/`);
     }
