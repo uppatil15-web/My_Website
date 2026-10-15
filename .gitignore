@@ -2,3 +2,6 @@ node_modules/
 .DS_Store
 *.zip
 backups/
+*.pptx
+Dynamic_Multi_Break_Routing_*
+*.py
