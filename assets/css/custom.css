@@ -475,126 +475,200 @@ body.affix li.wsite-menu-link-active .wsite-menu-item {
 }
 
 /* --------------------------------------------------------------------------
-   6. HOMEPAGE CONTENT SECTION (ZERO HTML CHANGES, TOTAL NORDIC OVERRIDE)
+   6. HOMEPAGE CONTENT SECTION (OPTION 2: TWO-ZONE BALANCED GRID)
    -------------------------------------------------------------------------- */
 .main-wrap {
   background: var(--nordic-bg-canvas);
 }
 
-/* Home Section Layout Container */
-.home-banner + .main-wrap section {
-  background: var(--nordic-bg-canvas) !important;
-  padding: var(--space-8) 0 !important;
+.home-twozone-section {
+  background: var(--nordic-bg-canvas);
+  padding: var(--space-8) 0;
 }
 
-/* Headshot Image Styling */
-.home-banner + .main-wrap img[src*="headshot.jpg"],
-.main-wrap img[alt*="Utkarsh Patil - Product Manager"] {
-  width: 130px !important;
-  height: 130px !important;
-  border-radius: var(--nordic-radius-pill) !important;
-  object-fit: cover !important;
-  border: 3px solid #ffffff !important;
-  box-shadow: var(--nordic-shadow-md) !important;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
+.home-twozone-section .container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-.home-banner + .main-wrap img[src*="headshot.jpg"]:hover {
-  transform: scale(1.03) !important;
-  box-shadow: var(--nordic-shadow-lift) !important;
+.home-twozone-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
 }
 
-/* Welcome Badge */
-.home-banner + .main-wrap span[style*="letter-spacing: 2px"] {
-  font-size: 11px !important;
-  font-weight: 700 !important;
-  color: var(--nordic-accent-fjord) !important;
-  letter-spacing: 2px !important;
-  text-transform: uppercase !important;
-  background: var(--nordic-accent-fjord-light) !important;
-  padding: 4px 10px !important;
-  border-radius: var(--nordic-radius-pill) !important;
-  display: inline-block !important;
-  margin-bottom: 4px !important;
+/* Zone 1: Identity & Value Proposition Header */
+.home-zone-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-/* Section H2 (Utkarsh Patil) */
-.home-banner + .main-wrap h2 {
-  font-family: var(--font-display) !important;
-  font-size: clamp(1.75rem, 3.5vw, 2.25rem) !important;
-  font-weight: 600 !important;
-  color: var(--nordic-text-primary) !important;
-  line-height: 1.25 !important;
-  margin: 6px 0 0 0 !important;
+.home-intro-profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
-/* Value Proposition H3 */
-.home-banner + .main-wrap h3 {
-  font-family: var(--font-sans) !important;
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
-  font-weight: 600 !important;
-  color: var(--nordic-text-primary) !important;
-  line-height: 1.45 !important;
-  margin: 0 !important;
+.home-headshot {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--nordic-radius-pill);
+  object-fit: cover;
+  border: 3px solid #ffffff;
+  box-shadow: var(--nordic-shadow-md);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
-/* Bio Paragraph */
-.home-banner + .main-wrap p {
-  color: var(--nordic-text-body) !important;
-  font-size: 16px !important;
-  line-height: 1.75 !important;
+.home-headshot:hover {
+  transform: scale(1.03);
+  box-shadow: var(--nordic-shadow-lift);
 }
 
-/* Personal Interests Callout Card (Overriding inline harsh black border-left) */
-.home-banner + .main-wrap p[style*="border-left"] {
-  background: #ffffff !important;
-  padding: 24px 28px !important;
-  border-radius: var(--nordic-radius-md) !important;
-  border: 1px solid var(--nordic-border-hairline) !important;
-  border-left: 3px solid var(--nordic-accent-fjord) !important;
-  box-shadow: var(--nordic-shadow-sm) !important;
-  color: var(--nordic-text-body) !important;
-  line-height: 1.7 !important;
-  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+.home-intro-meta {
+  display: flex;
+  flex-direction: column;
 }
 
-.home-banner + .main-wrap p[style*="border-left"]:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: var(--nordic-shadow-md) !important;
+.home-welcome-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--nordic-accent-fjord);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: var(--nordic-accent-fjord-light);
+  padding: 4px 10px;
+  border-radius: var(--nordic-radius-pill);
+  display: inline-block;
+  margin-bottom: 6px;
+  align-self: flex-start;
 }
 
-.home-banner + .main-wrap p[style*="border-left"] strong {
-  color: var(--nordic-text-primary) !important;
-  font-weight: 600 !important;
+.home-name {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--nordic-text-primary);
+  line-height: 1.25;
+  margin: 0 0 4px 0;
 }
 
-/* Explore My Work CTA Button */
-.home-banner + .main-wrap .wsite-button,
-a.wsite-button[href*="portfolio.html"] {
-  background: var(--nordic-text-primary) !important;
-  color: #ffffff !important;
-  border: 1px solid var(--nordic-text-primary) !important;
-  padding: 14px 28px !important;
-  border-radius: var(--nordic-radius-sm) !important;
-  text-decoration: none !important;
-  font-weight: 600 !important;
-  font-size: 13px !important;
-  letter-spacing: 0.8px !important;
-  text-transform: uppercase !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  box-shadow: var(--nordic-shadow-sm) !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+.home-title {
+  color: var(--nordic-text-subtle);
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
 }
 
-.home-banner + .main-wrap .wsite-button:hover,
-a.wsite-button[href*="portfolio.html"]:hover {
-  background: #1e293b !important;
-  border-color: #1e293b !important;
-  color: #ffffff !important;
-  transform: translateY(-2px) !important;
-  box-shadow: var(--nordic-shadow-md) !important;
+.home-value-prop {
+  font-family: var(--font-sans);
+  font-size: clamp(1.35rem, 2.5vw, 1.7rem);
+  font-weight: 600;
+  color: var(--nordic-text-primary);
+  line-height: 1.4;
+  margin: 0;
+  max-width: 920px;
+}
+
+/* Zone 2: Balanced Side-by-Side Cards */
+.home-zone-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.home-card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: var(--nordic-radius-md);
+  border: 1px solid var(--nordic-border-hairline);
+  box-shadow: var(--nordic-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--nordic-shadow-md);
+}
+
+/* Left Professional Card */
+.home-card-professional {
+  border-left: 3px solid var(--nordic-text-primary);
+  gap: 24px;
+}
+
+.home-card-professional .home-bio {
+  color: var(--nordic-text-body);
+  font-size: 15.5px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.btn-home-cta {
+  background: var(--nordic-text-primary);
+  color: #ffffff;
+  border: 1px solid var(--nordic-text-primary);
+  padding: 13px 26px;
+  border-radius: var(--nordic-radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--nordic-shadow-sm);
+  align-self: flex-start;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-home-cta:hover {
+  background: #1e293b;
+  border-color: #1e293b;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: var(--nordic-shadow-md);
+}
+
+/* Right Personal Interests Card */
+.home-card-interests {
+  border-left: 3px solid var(--nordic-accent-fjord);
+  justify-content: center;
+}
+
+.home-card-interests p {
+  color: var(--nordic-text-body);
+  font-size: 15.5px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.home-card-interests strong {
+  color: var(--nordic-text-primary);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* Responsive Collapse for Tablet & Mobile */
+@media (max-width: 820px) {
+  .home-zone-cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .home-card {
+    padding: 24px;
+  }
 }
 
 /* --------------------------------------------------------------------------

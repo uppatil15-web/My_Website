@@ -5,7 +5,8 @@
   "main": "dev-server.js",
   "scripts": {
     "dev": "node dev-server.js",
-    "build": "node build-theme.js"
+    "build": "node build-theme.js",
+    "verify": "node verify-contracts.js"
   },
   "keywords": ["weebly", "theme", "preview", "less"],
   "author": "",
