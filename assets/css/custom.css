@@ -800,9 +800,11 @@ nav[aria-label="Breadcrumb"] a:hover,
 }
 
 /* Project Cards Grid */
-.portfolio-banner + .main-wrap div[style*="display: grid"],
 .portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
   gap: var(--space-5);
+  align-items: start;
 }
 
 /* Architectural Project Card */
