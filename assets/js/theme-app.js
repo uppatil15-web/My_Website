@@ -291,4 +291,62 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ==========================================
+  // 8. Portfolio Category Filter Pills (Option 1)
+  // ==========================================
+  const filterPills = document.querySelectorAll('.portfolio-pill');
+  const projectCards = document.querySelectorAll('.portfolio-grid .project-card');
+
+  if (filterPills.length > 0 && projectCards.length > 0) {
+    function filterProjects(selectedCategory) {
+      projectCards.forEach(card => {
+        const categories = (card.getAttribute('data-categories') || '').split(/\s+/);
+        const matches = selectedCategory === 'all' || categories.includes(selectedCategory);
+
+        if (matches) {
+          card.classList.remove('is-hidden');
+          card.classList.remove('fade-in');
+          void card.offsetWidth;
+          card.classList.add('fade-in');
+        } else {
+          card.classList.add('is-hidden');
+          card.classList.remove('fade-in');
+        }
+      });
+    }
+
+    filterPills.forEach((pill, index) => {
+      pill.addEventListener('click', () => {
+        const targetCategory = pill.getAttribute('data-filter');
+
+        filterPills.forEach(p => {
+          p.classList.remove('active');
+          p.setAttribute('aria-selected', 'false');
+        });
+
+        pill.classList.add('active');
+        pill.setAttribute('aria-selected', 'true');
+
+        filterProjects(targetCategory);
+      });
+
+      // Keyboard accessibility navigation
+      pill.addEventListener('keydown', (e) => {
+        let nextIndex = null;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          nextIndex = (index + 1) % filterPills.length;
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          nextIndex = (index - 1 + filterPills.length) % filterPills.length;
+        }
+
+        if (nextIndex !== null) {
+          e.preventDefault();
+          filterPills[nextIndex].focus();
+          filterPills[nextIndex].click();
+        }
+      });
+    });
+  }
+
 });
+

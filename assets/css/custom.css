@@ -708,9 +708,101 @@ nav[aria-label="Breadcrumb"] a:hover,
   text-decoration: underline !important;
 }
 
+/* Portfolio Filter Pills (Option 1: Floating Nordic Capsules) */
+.portfolio-filter-wrap {
+  margin-bottom: var(--space-5);
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.portfolio-pill {
+  appearance: none;
+  border: 1px solid var(--nordic-border-hairline);
+  background: #ffffff;
+  color: var(--nordic-text-subtle);
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: var(--nordic-radius-pill);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--nordic-shadow-sm);
+  outline: none;
+}
+
+.portfolio-pill:hover {
+  background: var(--nordic-border-subtle);
+  color: var(--nordic-text-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--nordic-shadow-md);
+}
+
+.portfolio-pill.active {
+  background: var(--nordic-text-primary);
+  border-color: var(--nordic-text-primary);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+.portfolio-pill-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: var(--nordic-radius-pill);
+  background: rgba(15, 23, 42, 0.07);
+  color: var(--nordic-text-muted);
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.portfolio-pill.active .portfolio-pill-count {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.portfolio-pill:focus-visible {
+  outline: 2px solid var(--nordic-accent-fjord);
+  outline-offset: 2px;
+}
+
+.project-card.is-hidden {
+  display: none;
+}
+
+.project-card.fade-in {
+  animation: cardFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Project Cards Grid */
-.portfolio-banner + .main-wrap div[style*="display: grid"] {
-  gap: var(--space-5) !important;
+.portfolio-banner + .main-wrap div[style*="display: grid"],
+.portfolio-grid {
+  gap: var(--space-5);
 }
 
 /* Architectural Project Card */
